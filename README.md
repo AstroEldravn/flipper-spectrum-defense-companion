@@ -14,6 +14,11 @@ On detection, it **pings your Flipper Zero** (GPIO or UART) to vibrate, flash a 
 
 ---
 
+## PIPELINE / COLLABORATION
+- https://github.com/BPFLNALCR/sdr-watch
+- sdr-watch is a Wideband scanner, baseline builder, and bandplan mapper for SDR devices with a lightweight web dashboard.
+- Eventually I want to get this flipper spectrum companion to work in conjunction with the sdr-watch as this program has an intuitive WebGUI in development for visual categorization and multiple SDR use
+
 ## ✨ Highlights
 - Modular **detectors**: energy thresholding, burst patterning, spectral kurtosis, simple CUSUM changepoint.
 - **Cross‑platform**: RTL‑SDR, HackRF (via Soapy), rtl_tcp, or **offline IQ files** for testing.
