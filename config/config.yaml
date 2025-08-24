@@ -1,0 +1,30 @@
+device:
+  type: rtlsdr            # rtlsdr | hackrf | rtl_tcp | file
+  center_freq: 868300000
+  sample_rate: 2048000
+  gain: auto
+  host: 127.0.0.1:1234    # for rtl_tcp
+detectors:
+  enabled: [energy, burst, spectral_kurtosis, changepoint]
+thresholds:
+  energy_db: 6.0
+  hysteresis_db: 3.0
+  burst_min_windows: 3
+  burst_repeat_within_s: 3.0
+  sk_threshold: 4.0
+  cusum_threshold: 5.0
+window:
+  size: 4096
+  hop: 2048
+alert:
+  sinks: [flipper_gpio, log_event]
+  gpio:
+    pin: 17
+    pulse_ms: 250
+    pattern: triple
+  uart:
+    enabled: false
+    port: /dev/serial0
+    baudrate: 115200
+logging:
+  config: config/logging.yaml

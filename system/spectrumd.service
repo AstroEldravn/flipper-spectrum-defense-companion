@@ -1,0 +1,14 @@
+[Unit]
+Description=Spectrum Defense Companion
+After=network.target
+
+[Service]
+EnvironmentFile=/etc/spectrumd/spectrumd.env
+WorkingDirectory=/opt/flipper-spectrum-defense-companion
+ExecStart=/opt/flipper-spectrum-defense-companion/.venv/bin/python /opt/flipper-spectrum-defense-companion/src/main.py run --profile ${PROFILE} --device ${DEVICE} --freq ${FREQ} --sample-rate ${SR}
+Restart=on-failure
+RestartSec=2
+User=pi
+
+[Install]
+WantedBy=multi-user.target

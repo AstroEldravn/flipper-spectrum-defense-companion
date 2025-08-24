@@ -1,0 +1,12 @@
+device:
+  type: rtlsdr
+  center_freq: 868300000
+  sample_rate: 2048000
+detectors:
+  enabled: [energy, burst, spectral_kurtosis, changepoint]
+thresholds:
+  energy_db: 6.0
+  sk_threshold: 4.0
+  cusum_threshold: 6.0
+alert:
+  sinks: [flipper_gpio, log_event]

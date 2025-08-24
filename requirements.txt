@@ -1,0 +1,10 @@
+numpy>=1.26
+PyYAML>=6.0
+pydantic>=2.7
+typer>=0.12
+rich>=13.7
+pyrtlsdr>=0.3
+pyserial>=3.5
+gpiozero>=1.6.2
+requests>=2.32
+pytest>=8.2

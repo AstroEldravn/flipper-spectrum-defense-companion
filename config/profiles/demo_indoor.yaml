@@ -1,0 +1,10 @@
+device:
+  type: file
+detectors:
+  enabled: [energy, burst]
+thresholds:
+  energy_db: 5.5
+  burst_min_windows: 2
+  burst_repeat_within_s: 2.0
+alert:
+  sinks: [log_event]

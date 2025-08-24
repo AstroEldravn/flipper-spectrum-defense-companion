@@ -1,0 +1,10 @@
+device:
+  type: rtlsdr
+  center_freq: 433920000
+  sample_rate: 1024000
+detectors:
+  enabled: [energy, burst]
+thresholds:
+  energy_db: 5.0
+alert:
+  sinks: [flipper_gpio, log_event]
